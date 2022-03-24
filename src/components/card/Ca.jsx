@@ -4,7 +4,7 @@ const Ca = (x) => {
   return (
     <div>
       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="{x.imagem}" />
+  <Card.Img variant="top" src={x.imagem} />
   <Card.Body>
     <Card.Title>{x.titulo}</Card.Title>
     <Card.Text>
