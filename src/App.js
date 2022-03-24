@@ -2,15 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import carai from './pages/footer.svg';
-import Menu from './components/menu/menu';
-import {Button, Alert} from "react-bootstrap";
+
+import { Button, Alert, Container } from "react-bootstrap";
+import Menu from './components/menu/Menu';
+import Ca from './components/card/Ca';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+    return ( 
+        <div className='app'> 
+        <header>
+         <Menu/>
+        </header>
+        
+
+      <footer className="App-header"  fluid >
         <img src={logo} className="App-logo" alt="logo" />
-        <img src={carai} className="A" alt="carai" />
+        <img src={carai} className="eeeee" alt="carai" />
         <p>
           girando infinito no passinho do
         </p>
@@ -22,14 +29,11 @@ function App() {
         >
           hello world
         </a>
-        <Button variant='outline-secondary'>bla bla bla</Button>
-        <Alert>bla bla bla</Alert>
-      </header>
-      
-     
-      
+       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="ola mundo" />
+       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="bemvindo a nada" />
+      </footer>
     </div>
-  );
+    );
 }
 
 export default App;
