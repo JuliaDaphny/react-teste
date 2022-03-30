@@ -1,38 +1,30 @@
-import logo from './logo.svg';
+import { render } from "react-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import carai from './pages/footer.svg';
-
-import { Button, Alert, Container } from "react-bootstrap";
-import Menu from './components/menu/Menu';
-import Ca from './components/card/Ca';
+import Carros from './pages/Carros';
+import Array from './pages/Array';
+import Objeto from './pages/Objeto';
+import Pagina1 from './pages/Pagina1';
+import Menu from "./components/menu/Menu";
 
 function App() {
     return ( 
-        <div className='app'> 
-        <header>
-         <Menu/>
-        </header>
+    <BrowserRouter>
+        <Menu/> 
+        <Routes>
+            <Route path="" element={<Pagina1/>}/>
+                
+                <Route path="/carros" element={<Carros />}/>
+                <Route path="/objeto" element={<Objeto />} />
+                <Route path="/array" element={<Array />} />
+            
         
-
-      <footer className="App-header"  fluid >
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src={carai} className="eeeee" alt="carai" />
-        <p>
-          girando infinito no passinho do
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          hello world
-        </a>
-       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="ola mundo" />
-       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="bemvindo a nada" />
-      </footer>
-    </div>
+        </Routes>
+  </BrowserRouter>
     );
 }
 

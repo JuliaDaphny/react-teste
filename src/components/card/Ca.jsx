@@ -10,7 +10,7 @@ const Ca = (x) => {
     <Card.Text>
       {x.texto}
     </Card.Text>
-    <Button variant="primary">{x.nomebotao}</Button>
+    <Button variant={x.cor ? x.cor : 'primary'}>{x.nomebotao}</Button>
   </Card.Body>
 </Card>
     </div>
