@@ -1,10 +1,12 @@
 import React from 'react'
 
+
 const Array = () => {
+  const carros =[1,2,3,4,5]
   return (
     <div>
 
-Array
+{carros.map(item=>(<p>{item}</p>))}
 </div>
   )
 }

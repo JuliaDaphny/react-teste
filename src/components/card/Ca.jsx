@@ -6,11 +6,14 @@ const Ca = (x) => {
       <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={x.imagem} />
   <Card.Body>
-    <Card.Title>{x.titulo}</Card.Title>
+    <Card.Title>{x.marca} - {x.modelo}</Card.Title>
     <Card.Text>
-      {x.texto}
+      <strong>Cor : </strong>{x.cor}
     </Card.Text>
-    <Button variant={x.cor ? x.cor : 'primary'}>{x.nomebotao}</Button>
+    <Card.Text>
+      <strong>Ano : </strong>{x.ano}
+    </Card.Text>
+    <Button variant={x.core ? x.core : 'danger'}>{x.nomebotao}</Button>
   </Card.Body>
 </Card>
     </div>
