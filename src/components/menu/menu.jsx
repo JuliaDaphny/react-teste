@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 const Menu = () => {
   return (
 <div>
+
     <Navbar bg="light" expand="lg" fixed='top'>
   <Container>
     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
@@ -21,6 +22,7 @@ const Menu = () => {
     </Navbar.Collapse>
   </Container>
   </Navbar>
+  
   </div>
   )
 }
