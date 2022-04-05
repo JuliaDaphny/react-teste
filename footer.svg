@@ -93,7 +93,8 @@
           <li>npm i react-router-dom<li/>
           <li>endereço da documentation do router<li/>
           <li>https://reactrouterdotcom.fly.dev/docs/en/v6/getting-started/overview?msclkid=c0b0c8efafbe11ecbdd36c590b5db7d4<li/>	     
-             </ul> 
+          <li>npm i axios</li>   
+			 </ul> 
             </div>
         </div>
 </div>
