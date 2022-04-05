@@ -5,8 +5,9 @@ const Contador = () => {
     
   return (
     <div>
-     {numero}
      <Button variant='sucess' onClick={setNumero(++numero)}/>
+     {numero}
+     <Button variant='danger' onClick={setNumero(--numero)}/>
     </div>
   )
 }
