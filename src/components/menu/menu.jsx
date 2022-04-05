@@ -16,7 +16,8 @@ const Menu = () => {
         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
           <Link className='nav-link' to="/carros" >Carros</Link>
           <Link className='nav-link' to="/array" >Array</Link>
-          <Link className='nav-link' to="/objeto" >Objeto</Link>
+          
+          <Link className='nav-link' to="/contador" >Objeto</Link>
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
