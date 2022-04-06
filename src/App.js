@@ -8,9 +8,10 @@ import ReactDOM from "react-dom";
 import './App.css';
 import Carros from './pages/Carros';
 import Array from './pages/Array';
-
+import Contador from "./pages/Contador";
 import Pagina1 from './pages/Pagina1';
 import Menu from "./components/menu/Menu";
+import Filmes from "./pages/filmes/Filmes";
 
 function App() {
  
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/carros" element={<Carros />}/>
                 <Route path="/contador" element={<Contador />} />
                 <Route path="/array" element={<Array />} />
+                <Route path="/filmes/populares" element={<Filmes />} />
             
         
         </Routes>
