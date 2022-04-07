@@ -8,7 +8,7 @@ const Filmes = () => {
   let [filmes,setFilmes] = useState([])
   useEffect(()=>{
     async function data() {
-      const pega = await tmdb.get('/list/1');
+      const pega = await tmdb.get('/movie/popular?language=pt-BR');
       const data= pega.data.results
       setFilmes(data)
     }
@@ -20,7 +20,7 @@ const Filmes = () => {
       
       {filmes.map(item=>(
          <Col>   
-        <Ca  marca={item.title} modelo={item.adult} imagem={item.poster_path} cor={item.original_language} ano={item.release_date} nomebotao='Mais detalhes' />
+        <Ca id={item.id} marca={item.title} modelo={item.original_title} imagem={item.poster_path} cor={item.original_language} ano={item.release_date} nomebotao='Mais detalhes' />
         </Col>
       ))}
       

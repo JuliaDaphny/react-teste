@@ -12,7 +12,7 @@ import Contador from "./pages/Contador";
 import Pagina1 from './pages/Pagina1';
 import Menu from "./components/menu/Menu";
 import Filmes from "./pages/filmes/Filmes";
-
+import FilmesD from "./pages/filmes/FilmesD"
 function App() {
  
     return ( 
@@ -25,6 +25,7 @@ function App() {
                 <Route path="/contador" element={<Contador />} />
                 <Route path="/array" element={<Array />} />
                 <Route path="/filmes/populares" element={<Filmes />} />
+                <Route path="/filmes/populares/detalhe/:id" element={<FilmesD />} />
             
         
         </Routes>
