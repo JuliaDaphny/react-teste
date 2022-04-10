@@ -2,13 +2,13 @@ import React,{useState, useEffect} from 'react'
 import tmdb from '../../services/tmdb'
 import{Row , Col} from "react-bootstrap"
 import Ca from "../../components/card/Ca"
-const Filmes = () => {
+const Cartaz = () => {
   // declaração de state 
   
   let [filmes,setFilmes] = useState([])
   useEffect(()=>{
     async function data() {
-      const pega = await tmdb.get('/movie/popular?language=pt-BR');
+      const pega = await tmdb.get('/movie/upcoming?language=pt-BR');
       const data= pega.data.results
       console.log(data)
       setFilmes(data)
@@ -31,4 +31,4 @@ const Filmes = () => {
   )
 }
 
-export default Filmes
+export default Cartaz

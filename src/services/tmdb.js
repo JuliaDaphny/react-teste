@@ -1,9 +1,9 @@
-import axios fomr 'axios'
+import axios from 'axios'
 const tmdb = axios.create({
-    baseURL: 'https://api.themoviedb.org/4/',
-    headers:{
-        'Authorization':'',
-        'Content-Type':'application/json;charset=utf-8'
+    baseURL: 'https://api.themoviedb.org/3/',
+    headers: {
+        'Content-type': 'application/json;charset=utf-8',
+        'Authorization': ''
     }
 })
 

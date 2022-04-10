@@ -14,7 +14,7 @@ const Ca = (x) => {
     <Card.Text>
       <strong>Ano : </strong>{x.ano}
     </Card.Text>
-    <Button variant={x.core ? x.core : 'danger'}><Link className='btn' to={'/filmes/populares/detalhe/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
+    <Button variant={x.core ? x.core : 'danger'}><Link className='btn' to={'/filmes/detalhe/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
   </Card.Body>
 </Card>
     </div>

@@ -13,6 +13,8 @@ import Pagina1 from './pages/Pagina1';
 import Menu from "./components/menu/Menu";
 import Filmes from "./pages/filmes/Filmes";
 import FilmesD from "./pages/filmes/FilmesD"
+import Cartaz from './pages/filmes/Cartaz'
+import Lancamento from "./pages/filmes/Lancamento";
 function App() {
  
     return ( 
@@ -25,7 +27,9 @@ function App() {
                 <Route path="/contador" element={<Contador />} />
                 <Route path="/array" element={<Array />} />
                 <Route path="/filmes/populares" element={<Filmes />} />
-                <Route path="/filmes/populares/detalhe/:id" element={<FilmesD />} />
+                <Route path="/filmes/cartaz" element={<Cartaz />} />
+                <Route path="/filmes/lancamento" element={<Lancamento />} />
+                <Route path="/filmes/detalhe/:id" element={<FilmesD />} />
             
         
         </Routes>
