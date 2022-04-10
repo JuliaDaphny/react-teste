@@ -10,7 +10,6 @@ const Filmes = () => {
     async function data() {
       const pega = await tmdb.get('/movie/popular?language=pt-BR');
       const data= pega.data.results
-      console.log(data)
       setFilmes(data)
     }
     data();
