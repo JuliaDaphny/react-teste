@@ -1,19 +1,27 @@
 import React,{useEffect,useState} from 'react'
-import Ca from '../../components/card/Ca'
+import Caa from '../../components/card/Caa'
 import { useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
 
 const FilmesD = () => {
     const params = useParams()
-    let [filme,setFilmes] = useState([])
+    let [filme,setFilmes] = useState({})
+    let [ator,setAtor] = useState([])
   useEffect(()=>{
     async function data() {
       const pega = await tmdb.get('/movie/'+params.id+'?language=pt-BR');
       const data= pega.data
       setFilmes(data)
     }
-    data();
+    async function data1() {
+      const pega = await tmdb.get('/movie/'+params.id+'/credits?language=pt-BR');
+      const data= pega.data.cast
+  
+      setAtor(data)
+    }
+    data()
+    data1()
   },[])
   return (
     <div>
@@ -34,7 +42,18 @@ const FilmesD = () => {
             <p><strong>Sinopse: </strong>{filme.overview}</p>
         </Col>
     </Row>
-
+    <Row>
+      <h1 className='mb-3'>Atores:</h1>
+    </Row>
+    <Row xs={1} md={4} >
+      
+      {ator.map(item=>(
+         <Col className='mb-3'>   
+        <Caa id={item.id} marca={item.nome} modelo={item.original_name} imagem={item.profile_path} cor={item.character} ano={item.gender} nomebotao='Mais detalhes' />
+        </Col>
+      ))}
+      
+      </Row>
 </div>
   )}
 
