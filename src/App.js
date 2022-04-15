@@ -1,10 +1,10 @@
-import { render } from "react-dom";
+import react, {useState,useEffect} from 'react'
 import {
   BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
-import ReactDOM from "react-dom";
+
 import './App.css';
 import Carros from './pages/Carros';
 import Array from './pages/Array';
@@ -19,10 +19,25 @@ import AtoresD from "./pages/atores/AtoresD"
 import Series from "./pages/filmes/Series"
 import SeriesD from "./pages/filmes/SeriesD"
 function App() {
- 
+  const [blackHeader, setblackHeader]= useState(false);
+  useEffect(()=>{
+    const scrollListener = () =>{
+        if(window.scrollY > 10){
+          setblackHeader(true);
+        }else{
+          setblackHeader(false);
+        }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () =>{
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
     return ( 
   <BrowserRouter>
-        <Menu/> 
+        <Menu black={blackHeader}/> 
         <Routes>
             <Route path="" element={<Pagina1/>}/>
                 
