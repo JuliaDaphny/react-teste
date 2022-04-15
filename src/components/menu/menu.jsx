@@ -6,8 +6,9 @@ const Menu = () => {
   return (
 <div>
 
-    <Navbar bg="light" expand="lg" fixed='top'>
+    <Navbar bg="dark" variant="dark" expand="lg" sticky="top" >
   <Container>
+    <Link className='btn btn-danger' variant="left" to={-1} >Back</Link>
     <Navbar.Brand href="#home">Testando React</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
