@@ -5,7 +5,7 @@ const Ca = (x) => {
   return (
     <div>
       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+x.imagem} />
+  <Card.Img variant="top" src={ x.imagem ? 'https://image.tmdb.org/t/p/w500'+ x.imagem : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pdTz5L8m-BnQaPfYvrKXSpvTxri_DDtSqw&usqp=CAU'} />
   <Card.Body>
     <Card.Title>{x.marca} - {x.modelo}</Card.Title>
     <Card.Text className='text-dark'>

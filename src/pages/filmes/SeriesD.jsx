@@ -56,7 +56,7 @@ const FilmesD = () => {
       {temp2.map(item=>(
          <Col className='mb-3'>   
           <Card>
-          <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+item.poster_path} />
+          <Card.Img variant="top" src={ item.poster_path ? 'https://image.tmdb.org/t/p/w500'+ item.poster_path : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pdTz5L8m-BnQaPfYvrKXSpvTxri_DDtSqw&usqp=CAU'} />
           <Card.Body>
               <Card.Title>{item.name} - {item.season_number}</Card.Title>
           </Card.Body>
