@@ -20,7 +20,7 @@ const Menu = () => {
           <Link className='nav-link' to="/filmes/cartaz" >filmes cartaz</Link>
           <Link className='nav-link' to="/filmes/lancamento" >filmes lançamento</Link>
           <Link className='nav-link' to="/series" >series</Link>
-          >
+          
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>
