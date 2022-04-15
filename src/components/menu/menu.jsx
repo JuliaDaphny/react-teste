@@ -7,13 +7,13 @@ const Menu = ({black}) => {
   return (
 <div>
 <header className={black ? 'black' : ''}>
-  <Navbar bg="black" variant="dark" expand="lg"  >
+  <Navbar className='nav'  variant="dark" expand="lg" >
   <Container>
-    <Link className='btn btn-danger' to={-1} >Back</Link>
-    <Navbar.Brand href="">Testando React</Navbar.Brand>
+    <Link className='btn btn-danger bt' to={-1} >Back</Link>
+    <Navbar.Brand href=""> Testando React</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="me-auto">
+      <Nav className="align-right">
         <Nav.Link href="/">Home</Nav.Link>
         <NavDropdown menuVariant='dark' title="Dropdown" id="basic-nav-dropdown">
           <Link className='nav-link' to="/carros" >Carros</Link>

@@ -36,8 +36,10 @@ function App() {
     }
   }, []);
     return ( 
+<div className='app'>
   <BrowserRouter>
         <Menu black={blackHeader}/> 
+        
         <Routes>
             <Route path="" element={<Pagina1/>}/>
                 
@@ -54,7 +56,9 @@ function App() {
             
         
         </Routes>
+        
   </BrowserRouter>
+  </div>
     );
 }
 

@@ -3,7 +3,8 @@ import Caa from '../../components/card/Caa'
 import { useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
-
+import '../../App.css'
+import '../det.css'
 const FilmesD = () => {
     const params = useParams()
     let [serie,setSerie] = useState({})
@@ -28,7 +29,7 @@ const FilmesD = () => {
     data1()
   },[])
   return (
-    <div>
+    <div className='cont'>
             
     <h1>{serie.name}</h1>
 

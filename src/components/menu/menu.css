@@ -12,6 +12,18 @@ header{
     background: transparent;
     transition: all ease 1s;
 }
+.bt{
+    margin-right: 15px;
+}
+.nav{
+    font-size: large;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
 header.black{
-    background-color: #141414;
+    background: rgba(0, 0, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }

@@ -20,7 +20,7 @@ const Cartaz = () => {
         <Row xs={1} md={4} >
       
       {filmes.map(item=>(
-         <Col>   
+         <Col className='mb-3'>   
         <Ca id={item.id} marca={item.title} modelo={item.original_title} imagem={item.poster_path} cor={item.original_language} ano={item.release_date} nomebotao='Mais detalhes' />
         </Col>
       ))}

@@ -20,7 +20,7 @@ const Cartaz = () => {
         <Row xs={1} md={4} >
       
       {series.map(item=>(
-         <Col>   
+         <Col className='mb-3'>   
         <Caaa id={item.id} marca={item.name} modelo={item.original_name} imagem={item.poster_path} cor={item.original_language} ano={item.first_air_date} nomebotao='Mais detalhes' />
         </Col>
       ))}

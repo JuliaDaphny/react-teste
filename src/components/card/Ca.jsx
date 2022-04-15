@@ -8,13 +8,13 @@ const Ca = (x) => {
   <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+x.imagem} />
   <Card.Body>
     <Card.Title>{x.marca} - {x.modelo}</Card.Title>
-    <Card.Text>
-      <strong>idioma : </strong>{x.cor}
+    <Card.Text className='text-dark'>
+      <strong className='text-dark'>idioma : </strong>{x.cor}
     </Card.Text>
-    <Card.Text>
-      <strong>Ano : </strong>{x.ano}
+    <Card.Text className='text-dark'>
+      <strong className='text-dark'>Ano : </strong>{x.ano}
     </Card.Text>
-    <Button variant={x.core ? x.core : 'danger'}><Link className='btn' to={'/filmes/detalhe/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
+    <Button variant={x.core ? x.core : 'danger'}><Link className='btn text-white' to={'/filmes/detalhe/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
   </Card.Body>
 </Card>
     </div>

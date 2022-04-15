@@ -6,7 +6,7 @@ const Caa = (x) => {
     <div>
       <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500'+x.imagem} />
-  <Card.Body>
+  <Card.Body className='text-dark'>
     <Card.Title>{x.marca} - {x.modelo}</Card.Title>
     <Card.Text>
       <strong>idioma : </strong>{x.cor}
@@ -14,7 +14,7 @@ const Caa = (x) => {
     <Card.Text>
       <strong>data de inicio : </strong>{x.ano}
     </Card.Text>
-    <Button variant={x.core ? x.core : 'danger'}><Link className='btn' to={'/series/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
+    <Button variant={x.core ? x.core : 'danger'}><Link className='btn text-white' to={'/series/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
   </Card.Body>
 </Card>
     </div>

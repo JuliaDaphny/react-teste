@@ -22,7 +22,7 @@ const Lancamento = () => {
         <Row xs={1} md={4} >
       
       
-         <Col>   
+         <Col className='mb-3'>   
         <Ca id={filme.id} marca={filme.title} modelo={filme.original_title} imagem={filme.poster_path} cor={filme.original_language} ano={filme.release_date} nomebotao='Mais detalhes' />
         </Col>
       

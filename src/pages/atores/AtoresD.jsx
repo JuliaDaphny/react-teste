@@ -3,7 +3,8 @@ import Ca from '../../components/card/Ca'
 import { useParams } from 'react-router-dom'
 import tmdb from '../../services/tmdb'
 import {Row,Col,Card} from 'react-bootstrap'
-
+import '../../App.css'
+import '../det.css'
 const AtoresD = () => {
     const params = useParams()
     let [ator,setAtor] = useState({})
@@ -24,9 +25,9 @@ const AtoresD = () => {
     data1()
   },[])
   return (
-    <div>
+    <div className='cont'>
             
-    <h1>{ator.name}</h1>
+    <h1 className='text'>{ator.name}</h1>
 
     <Row>
         <Col md={4}>
