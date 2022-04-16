@@ -32,7 +32,7 @@ const AtoresD = () => {
     <Row>
         <Col md={4}>
             <Card>
-                <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500/' + ator.profile_path} />
+                <Card.Img variant="top" src={ ator.profile_path ? 'https://image.tmdb.org/t/p/w500'+ ator.profile_path : 'https://www.prescriptum.com.br/wp-content/uploads/2015/12/placeholder-usuario-500x500.jpg'} />
             </Card>
         </Col>
         <Col md={8}>

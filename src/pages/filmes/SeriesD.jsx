@@ -36,7 +36,7 @@ const FilmesD = () => {
     <Row>
         <Col md={4}>
             <Card>
-                <Card.Img variant="top" src={'https://image.tmdb.org/t/p/w500/' + serie.poster_path} />
+                <Card.Img variant="top" src={ serie.poster_path ? 'https://image.tmdb.org/t/p/w500'+ serie.poster_path : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pdTz5L8m-BnQaPfYvrKXSpvTxri_DDtSqw&usqp=CAU'} />
             </Card>
         </Col>
         <Col md={8}>
