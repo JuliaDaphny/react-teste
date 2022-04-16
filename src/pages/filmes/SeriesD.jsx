@@ -27,7 +27,7 @@ const FilmesD = () => {
     }
     data()
     data1()
-  },[])
+  },[params.id])
   return (
     <div className='cont'>
             

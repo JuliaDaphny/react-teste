@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import carai from './footer.svg';
 
 
-import Ca from '../components/card/Ca';
+
 
 const Pagina1 = () => {
   return (
@@ -27,8 +27,7 @@ const Pagina1 = () => {
         >
           hello world
         </a>
-       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="ola mundo" />
-       <Ca imagem="holder.js/100px180" texto="bla bla bla 123" titulo="bla" nomebotao="bemvindo a nada" />
+       
       </footer>
     </div>
   )
