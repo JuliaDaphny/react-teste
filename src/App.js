@@ -1,35 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import carai from './pages/footer.svg';
-import Menu from './components/menu/menu';
-import {Button, Alert} from "react-bootstrap";
+import react, {useState,useEffect} from 'react'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
+import './App.css';
+import Carros from './pages/Carros';
+import Array from './pages/Array';
+import Contador from "./pages/Contador";
+import Pagina1 from './pages/Pagina1';
+import Menu from "./components/menu/Menu";
+import Filmes from "./pages/filmes/Filmes";
+import FilmesD from "./pages/filmes/FilmesD"
+import Cartaz from './pages/filmes/Cartaz'
+import Lancamento from "./pages/filmes/Lancamento";
+import AtoresD from "./pages/atores/AtoresD"
+import Series from "./pages/filmes/Series"
+import SeriesD from "./pages/filmes/SeriesD"
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <img src={carai} className="A" alt="carai" />
-        <p>
-          girando infinito no passinho do
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          hello world
-        </a>
-        <Button variant='outline-secondary'>bla bla bla</Button>
-        <Alert>bla bla bla</Alert>
-      </header>
-      
-     
-      
-    </div>
-  );
+  const [blackHeader, setblackHeader]= useState(false);
+  useEffect(()=>{
+    const scrollListener = () =>{
+        if(window.scrollY > 10){
+          setblackHeader(true);
+        }else{
+          setblackHeader(false);
+        }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () =>{
+      window.removeEventListener('scroll', scrollListener);
+    }
+  }, []);
+    return ( 
+<div className='app'>
+  <BrowserRouter>
+        <Menu black={blackHeader}/> 
+        
+        <Routes>
+            <Route path="" element={<Pagina1/>}/>
+                
+                <Route path="/carros" element={<Carros />}/>
+                <Route path="/contador" element={<Contador />} />
+                <Route path="/array" element={<Array />} />
+                <Route path="/filmes/populares" element={<Filmes />} />
+                <Route path="/filmes/cartaz" element={<Cartaz />} />
+                <Route path="/filmes/lancamento" element={<Lancamento />} />
+                <Route path="/series" element={<Series />} />
+                <Route path="/series/:id" element={<SeriesD />} />
+                <Route path="/filmes/detalhe/:id" element={<FilmesD />} />
+                <Route path="/atores/detalhe/:id" element={<AtoresD />} />
+            
+        
+        </Routes>
+        
+  </BrowserRouter>
+  </div>
+    );
 }
 
 export default App;
