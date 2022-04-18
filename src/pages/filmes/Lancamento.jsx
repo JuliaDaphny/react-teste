@@ -9,8 +9,8 @@ const Lancamento = () => {
   useEffect(()=>{
     async function data() {
       
-      const pega = await tmdb.get('/movie/latest?language=pt-BR');
-      const data= pega.data
+      const pega = await tmdb.get('/movie/upcoming?language=pt-BR');
+      const data= pega.data.results
         setFilmes(data)
       
       
@@ -19,13 +19,13 @@ const Lancamento = () => {
   },[])
   return (
     <div>
-        <Row xs={1} md={4} >
+       <Row xs={1} xxl={7} xl={5} md={3} sm={2} >
       
-      
+        {filme.map(item=>(
          <Col className='mb-3'>   
-        <Ca id={filme.id} marca={filme.title} modelo={filme.original_title} imagem={filme.poster_path} cor={filme.original_language} ano={filme.release_date} nomebotao='Mais detalhes' />
+        <Ca id={item.id} marca={item.title} modelo={item.original_title} imagem={item.poster_path} cor={item.original_language} ano={item.release_date} nomebotao='Mais detalhes' />
         </Col>
-      
+        ))}
       
       </Row>
         

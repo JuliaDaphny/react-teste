@@ -16,7 +16,7 @@ const Filmes = () => {
   },[])
   return (
     <div>
-        <Row xs={1} md={4} >
+       <Row xs={1} xxl={7} xl={5} md={3} sm={2} >
       
       {filmes.map(item=>(
          <Col className='mb-3'>   

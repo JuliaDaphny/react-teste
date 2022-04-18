@@ -1,4 +1,4 @@
-import react, {useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import {
   BrowserRouter,
   Routes,
@@ -18,6 +18,8 @@ import Lancamento from "./pages/filmes/Lancamento";
 import AtoresD from "./pages/atores/AtoresD"
 import Series from "./pages/filmes/Series"
 import SeriesD from "./pages/filmes/SeriesD"
+import Seriesl from "./pages/filmes/Seriesl"
+import Seriesair from "./pages/filmes/Seriesair"
 function App() {
   const [blackHeader, setblackHeader]= useState(false);
   useEffect(()=>{
@@ -49,7 +51,9 @@ function App() {
                 <Route path="/filmes/populares" element={<Filmes />} />
                 <Route path="/filmes/cartaz" element={<Cartaz />} />
                 <Route path="/filmes/lancamento" element={<Lancamento />} />
-                <Route path="/series" element={<Series />} />
+                <Route path="/series/populares" element={<Series />} />
+                <Route path="/series/lancamento" element={<Seriesl />} />
+                <Route path="/series/cartaz" element={<Seriesair />} />
                 <Route path="/series/:id" element={<SeriesD />} />
                 <Route path="/filmes/detalhe/:id" element={<FilmesD />} />
                 <Route path="/atores/detalhe/:id" element={<AtoresD />} />

@@ -52,7 +52,7 @@ const AtoresD = () => {
     <Row>
       <h1 className='mb-3'>Filmes participantes:</h1>
     </Row>
-    <Row xs={1} md={4} >
+    <Row xs={1} xxl={10} xl={7} md={5} sm={3} >
       
       {filmes.map(item=>(
          <Col className='mb-3'>   
@@ -64,7 +64,7 @@ const AtoresD = () => {
       <Row>
       <h1 className='mb-3'>Series participantes:</h1>
     </Row>
-    <Row xs={1} md={4} >
+    <Row xs={1} xxl={10} xl={7} md={5} sm={3} >
       
       {series.map(item=>(
          <Col className='mb-3'>   

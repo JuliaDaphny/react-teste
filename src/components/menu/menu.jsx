@@ -14,15 +14,17 @@ const Menu = ({black}) => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="align-right">
-        <Nav.Link href="/">Home</Nav.Link>
-        <NavDropdown menuVariant='dark' title="Dropdown" id="basic-nav-dropdown">
-          <Link className='nav-link' to="/carros" >Carros</Link>
-          
+      <Link className='nav-link' to="" >Home</Link>
+        <Link className='nav-link' to="/carros" >Carros</Link>
+        <NavDropdown menuVariant='dark' title="Filmes" id="basic-nav-dropdown">
           <Link className='nav-link' to="/filmes/populares" >filmes populares</Link>
           <Link className='nav-link' to="/filmes/cartaz" >filmes cartaz</Link>
-          <Link className='nav-link' to="/filmes/lancamento" >filmes lançamento</Link>
-          <Link className='nav-link' to="/series" >series</Link>
-          
+          <Link className='nav-link' to="/filmes/lancamento" >filmes lançamento</Link>        
+        </NavDropdown>
+        <NavDropdown menuVariant='dark' title="Series" id="basic-nav-dropdown">
+          <Link className='nav-link' to="/series/populares" >series populares</Link>
+          <Link className='nav-link' to="/series/cartaz" >series cartaz</Link>
+          <Link className='nav-link' to="/series/lancamento" >series lançamento</Link>        
         </NavDropdown>
       </Nav>
     </Navbar.Collapse>

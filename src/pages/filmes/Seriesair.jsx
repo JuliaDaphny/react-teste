@@ -1,17 +1,17 @@
 import React,{useState, useEffect} from 'react'
 import tmdb from '../../services/tmdb'
 import{Row , Col} from "react-bootstrap"
-import Ca from "../../components/card/Ca"
+import Caaa from "../../components/card/Caaa"
 const Cartaz = () => {
   // declaração de state 
   
-  let [filmes,setFilmes] = useState([])
+  let [series,setSeries] = useState([])
   useEffect(()=>{
     async function data() {
-      const pega = await tmdb.get('/movie/now_playing?language=pt-BR');
+      const pega = await tmdb.get('/tv/on_the_air?language=pt-BR');
       const data= pega.data.results
  
-      setFilmes(data)
+      setSeries(data)
     }
     data();
   },[])
@@ -19,9 +19,9 @@ const Cartaz = () => {
     <div>
         <Row xs={1} xxl={7} xl={5} md={3} sm={2} >
       
-      {filmes.map(item=>(
+      {series.map(item=>(
          <Col className='mb-3'>   
-        <Ca id={item.id} marca={item.title} modelo={item.original_title} imagem={item.poster_path} cor={item.original_language} ano={item.release_date} nomebotao='Mais detalhes' />
+        <Caaa id={item.id} marca={item.name} modelo={item.original_name} imagem={item.poster_path} cor={item.original_language} ano={item.first_air_date} nomebotao='Mais detalhes' />
         </Col>
       ))}
       
