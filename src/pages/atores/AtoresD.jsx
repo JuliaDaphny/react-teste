@@ -45,6 +45,7 @@ const AtoresD = () => {
         <Col md={8}>
             <p><strong>nome: </strong>{ator.name}</p>
             <p><strong>Popularidade: </strong>{ator.popularity}</p>
+            <p><strong>Genero: </strong>{ator.gender===1? 'Feminino': (ator.gender ===2?'Masculino':'Indefinido')}</p>
             <p><strong>Data de aniversario: </strong>{ator.birthday}</p>
             <p><strong>Sinopse: </strong>{ator.biography}</p>
         </Col>

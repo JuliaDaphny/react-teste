@@ -12,7 +12,7 @@ const Caa = (x) => {
       <strong>personagem : </strong>{x.cor}
     </Card.Text >
     <Card.Text className='text-dark'>
-      <strong>gender : </strong>{x.ano}
+      <strong>gender : </strong>{x.ano===1? 'Feminino': (x.ano ===2?'Masculino':'Indefinido')}
     </Card.Text>
     <Button variant={x.core ? x.core : 'danger'}><Link className='btn text-white' to={'/atores/detalhe/'+x.id}>{x.nomebotao}{x.id}</Link></Button>
   </Card.Body>

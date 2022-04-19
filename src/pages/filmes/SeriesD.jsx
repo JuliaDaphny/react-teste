@@ -13,9 +13,8 @@ const FilmesD = () => {
   useEffect(()=>{
     async function data() {
       const pega = await tmdb.get('/tv/'+params.id+'?language=pt-BR');
-      const pega2= await tmdb.get('/tv/'+params.id+'?language=pt-BR');
       const data= pega.data
-      const data1 = pega2.data.seasons
+      const data1 = pega.data.seasons
       setSerie(data)
       setTemp2(data1)
     }
